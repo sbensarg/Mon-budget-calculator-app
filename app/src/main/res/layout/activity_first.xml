@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".FirstActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="5dp"
+            android:src="@color/blue1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center"
+            android:text="Mon budget mensuel"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"></TextView>
+
+        <ImageView
+            android:id="@+id/closePopupCorrect"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="130dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:elevation="5dp"
+            android:src="@drawable/ic_paper" />
+    </RelativeLayout>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="40dp"
+       android:orientation="vertical">
+       <Button
+           android:id="@+id/intent_bg"
+           android:layout_width="300dp"
+           android:layout_height="40dp"
+           android:background="@drawable/botton_dw"
+           android:textColor="@color/white"
+           android:textSize="17dp"
+           android:textStyle="bold"
+           android:fontFamily="monospace"
+           android:layout_gravity="center"
+           android:layout_weight="1"
+           android:text="calculer votre budget" />
+
+       <Button
+           android:id="@+id/intent_epg"
+           android:layout_width="300dp"
+           android:layout_gravity="center"
+           android:layout_height="40dp"
+           android:textColor="@color/white"
+           android:textSize="17dp"
+           android:textStyle="bold"
+           android:fontFamily="monospace"
+           android:background="@drawable/botton_reset"
+           android:layout_marginTop="20dp"
+           android:layout_weight="1"
+           android:text="eparge mosuelle" />
+   </LinearLayout>
+
+</LinearLayout>

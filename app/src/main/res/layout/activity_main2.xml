@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginRight="5dp"
+    android:gravity="center">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="5dp"
+        android:src="@color/blue_dark" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="Mon budget mensuel"
+        android:textSize="25sp"
+        android:textStyle="bold"></TextView>
+
+    <ImageView
+        android:id="@+id/closePopupCorrect"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:elevation="5dp"
+        android:src="@drawable/ic_paper" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15dp"
+        android:layout_marginTop="80dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="Dépenses fixes"
+                        android:textColor="@color/blue_dark"
+                        android:fontFamily="monospace"
+                        android:textStyle="bold"
+                        >
+                    </TextView>
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spinner_currency2"
+                        android:layout_width="80dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="10dp"
+                        android:background="@color/yellow"
+                        android:entries="@array/currency_munu"
+                        android:layout_marginRight="10dp"></androidx.appcompat.widget.AppCompatSpinner>
+                </RelativeLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="8dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:text="Loyer"
+                    android:textColor="@color/blue_dark"
+                    android:fontFamily="sans-serif-light"
+                    android:textStyle="bold"
+                    >
+                </TextView>
+
+                <EditText
+                    android:id="@+id/editText5"
+                    android:layout_width="130dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentRight="true"
+                    android:inputType="numberDecimal"
+                    android:text="0" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Services publics"
+                    android:textColor="@color/blue_dark"
+                    android:textSize="12dp"
+                    android:textStyle="bold"></TextView>
+
+                <EditText
+                    android:id="@+id/editText6"
+                    android:layout_width="130dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentRight="true"
+
+                    android:inputType="numberDecimal"
+                    android:text="0" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="8dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="@color/blue_dark"
+                    android:text="Communications"
+                    android:fontFamily="sans-serif-light"
+                    android:textStyle="bold"
+                    >
+                </TextView>
+
+                <EditText
+                    android:id="@+id/editText7"
+                    android:layout_width="130dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentRight="true"
+                    android:inputType="numberDecimal"
+                    android:text="0" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="8dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:text="Autres"
+                    android:textColor="@color/blue_dark"
+                    android:fontFamily="sans-serif-light"
+                    android:textStyle="bold"
+                    >
+                </TextView>
+
+                <EditText
+                    android:id="@+id/editText8"
+                    android:layout_width="130dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentRight="true"
+                    android:inputType="numberDecimal"
+                    android:text="0" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:weightSum="2"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btn_calcule2"
+                    android:layout_width="110dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/botton_round"
+                    android:padding="10dp"
+                    android:text="Calculer" />
+
+                <Button
+                    android:id="@+id/btn_reset2"
+                    android:layout_width="110dp"
+                    android:layout_height="40dp"
+                    android:padding="10dp"
+                    android:text="Reset"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="@color/white"
+                    android:background="@drawable/botton_reset"
+                    android:layout_gravity="center_horizontal" />
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+                <TextView
+                    android:id="@+id/tv_reslt_activity2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:textColor="@color/blue_dark"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="Total des dépenses fixes:"
+                    android:fontFamily="serif-monospace"
+                    android:textStyle="bold"
+                    >
+                </TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/btnflech2"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/ic_arrow_forward_black_24dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    ></Button>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
